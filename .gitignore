@@ -1,0 +1,23 @@
+node_modules
+dist
+coverage
+logs
+*.log
+.env
+.DS_Store
+# Ignore IDE specific files
+.vscode/
+.idea/
+# Ignore OS specific files
+Thumbs.db
+Desktop.ini
+# Ignore build artifacts
+build/
+dist/
+# Ignore test coverage reports
+coverage/
+# Ignore npm debug logs
+npm-debug.log*
+# Ignore lock files
+package-lock.json
+yarn.lock
