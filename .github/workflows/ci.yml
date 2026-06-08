@@ -1,4 +1,4 @@
-name: First Pipeline
+name: Node CI
 
 on:
   push:
@@ -6,15 +6,16 @@ on:
       - master
 
 jobs:
-
   test:
-
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v4
 
-      - name: Checkout Code
-        uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
 
-      - name: Print Message
-        run: echo "Pipeline Running"
+      - run: node -v
+
+      - run: node index.js
